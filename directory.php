@@ -16,7 +16,7 @@
 	<body>
 		<div class="container">
 			<a href="index.php">← Back to Home</a><br><br>
-			<div class="jumbotron bg-dark text-light">
+			<div class="jumbotron btn-success text-light">
 				<h1 class="display-4">Links Directory</h1>
 			</div>
 			<table class="table">

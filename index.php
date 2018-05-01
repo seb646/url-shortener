@@ -46,20 +46,12 @@
 				</div>
 			</div><br>
 
-  			<div class="row" style="text-align: center;">
+  			<div class="row">
   				<div class="col">
-  					<div class="card">
-		  				<div class="card-body">
-		  					<a href="directory.php">Links Directory</a>
-		  				</div>
-		  			</div>
+  					<a class="btn btn-success btn-block font-weight-bold p-3" role="button" href="directory.php">Links Directory</a>
 		  		</div>
   				<div class="col">
-  					<div class="card">
-		  				<div class="card-body">
-  							<a href="https://github.com/seb646/url-shortener">GitHub Source</a>
-  						</div>
-  					</div>
+  					<a class="btn btn-dark btn-block font-weight-bold p-3" role="button" href="https://github.com/seb646/url-shortener">GitHub Source</a>
   				</div>
   			</div><br>
 
