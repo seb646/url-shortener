@@ -1,5 +1,5 @@
 # url-shortener
-This simple URL shortener was created using PHP. This service tracks the date each link was added and how many times each link has been clicked. The main page (`index.php`) features a display of the five most recent links and the five most clicked links. There is also a built in links directory (`directory.php`) page to track every link in the database. There is also an included `.htaccess` file that directs `example.com/redirect.php?code=xxxxx` to `example.com/xxxxx`.
+This simple URL shortener was created using PHP. This service tracks the date each link was added and how many times each link has been clicked. The main page (`index.php`) features a display of the five most recent links and the five most clicked links. There is also a built in links directory (`directory.php`) page to track every link in the database. There is also an included `.htaccess` file that directs `http://example.com/redirect.php?code=xxxxx` to `http://example.com/xxxxx`.
 
 * [View Demo](https://seb646.com/surl/)
 
