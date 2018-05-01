@@ -5,7 +5,7 @@ class Shortener{
 
 	public function __construct(){
 		// Connect to MySQL Database
-		$this->db = new mysqli('localhost', 'USERNAME', 'PASSWORD', 'short-url');
+		$this->db = new mysqli('localhost', 'USERNAME', 'PASSWORD', 'surl');
 	}
 
 	protected function generateCode($num){

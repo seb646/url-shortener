@@ -5,7 +5,7 @@ if(isset($_GET['code'])){
 	$s = new Shortener;
 	$code = $_GET['code'];
 
-	$mysqli = mysqli_connect("localhost", "USERNAME", "PASSWORD", "short-url");
+	$mysqli = mysqli_connect("localhost", "USERNAME", "PASSWORD", "surl");
 	$mysqli->query("UPDATE links SET clicks = clicks + 1 WHERE code = '{$code}'");
 	$mysqli->close();
 

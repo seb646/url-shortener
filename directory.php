@@ -1,6 +1,6 @@
 <?php 
 	// Connect to MySQL Database 
-	$mysqli  = mysqli_connect("localhost", "USERNAME", "PASSWORD", "short-url");
+	$mysqli  = mysqli_connect("localhost", "USERNAME", "PASSWORD", "surl");
 
 	// Query the latest five entries 
 	$newest = $mysqli->query("SELECT * FROM links ORDER BY created DESC");
