@@ -11,5 +11,5 @@ Create a database named `surl` and import `surl.sql`. Replace `USERNAME` and `PA
 * `assets/classes/Shortener.php` (line 8).
 
 ## Credits
-- This project was based on a URL shortener by [Codecourse](https://www.youtube.com/channel/UCpOIUW62tnJTtpWFABxWZ8g) ([Original Video](https://www.youtube.com/watch?v=QN2VXBNujRs));
+- This project is based on a URL shortener created by [Codecourse](https://www.youtube.com/channel/UCpOIUW62tnJTtpWFABxWZ8g) ([Original Video](https://www.youtube.com/watch?v=QN2VXBNujRs));
 - This project utilizes [Bootstrap 4.0](https://getbootstrap.com).
