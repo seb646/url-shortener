@@ -1,15 +1,17 @@
 <?php 
-	// Start a session 
-	session_start();
+/** Code written by GitHub user @seb646 (https://github.com). Source: https://github.com/seb646/url-shortener. */
 
-	// Connect to MySQL Database 
-	$mysqli  = mysqli_connect("localhost", "USERNAME", "PASSWORD", "surl");
+// Start a session 
+session_start();
 
-	// Query the latest five entries 
-	$newest = $mysqli->query("SELECT * FROM links ORDER BY created DESC LIMIT 5");
+// Connect to MySQL Database 
+$mysqli  = mysqli_connect("localhost", "USERNAME", "PASSWORD", "surl");
 
-	// Query the latest five entries 
-	$used = $mysqli->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
+// Query the latest five entries 
+$newest = $mysqli->query("SELECT * FROM links ORDER BY created DESC LIMIT 5");
+
+// Query the latest five entries 
+$used = $mysqli->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 ?>
 
 <!DOCTYPE html>
@@ -46,12 +48,12 @@
 				</div>
 			</div><br>
 
-  			<div class="row">
+			<div class="row">
   				<div class="col">
-  					<a class="btn btn-success btn-block font-weight-bold p-3" role="button" href="directory.php">Links Directory</a>
+  					<a class="btn btn-success btn-block p-3" role="button" href="directory.php">Links Directory</a>
 		  		</div>
   				<div class="col">
-  					<a class="btn btn-dark btn-block font-weight-bold p-3" role="button" href="https://github.com/seb646/url-shortener">GitHub Source</a>
+  					<a class="btn btn-dark btn-block p-3" role="button" href="https://github.com/seb646/url-shortener">GitHub Source</a>
   				</div>
   			</div><br>
 

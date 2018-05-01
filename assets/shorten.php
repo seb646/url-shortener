@@ -1,4 +1,6 @@
 <?php 
+/** Code written by GitHub user @seb646 (https://github.com). Source: https://github.com/seb646/url-shortener. */
+
 session_start();
 require_once 'classes/Shortener.php';
 

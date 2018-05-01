@@ -1,9 +1,11 @@
 <?php 
-	// Connect to MySQL Database 
-	$mysqli  = mysqli_connect("localhost", "USERNAME", "PASSWORD", "surl");
+/** Code written by GitHub user @seb646 (https://github.com). Source: https://github.com/seb646/url-shortener. */
 
-	// Query the latest five entries 
-	$newest = $mysqli->query("SELECT * FROM links ORDER BY created DESC");
+// Connect to MySQL Database 
+$mysqli  = mysqli_connect("localhost", "USERNAME", "PASSWORD", "surl");
+
+// Query the latest five entries 
+$newest = $mysqli->query("SELECT * FROM links ORDER BY created DESC");
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +18,7 @@
 	<body>
 		<div class="container">
 			<a href="index.php">← Back to Home</a><br><br>
-			<div class="jumbotron btn-success text-light">
+			<div class="jumbotron bg-success text-light">
 				<h1 class="display-4">Links Directory</h1>
 			</div>
 			<table class="table">
