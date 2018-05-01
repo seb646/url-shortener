@@ -1,5 +1,5 @@
 # url-shortener
-This simple URL shortener was created using PHP. This service tracks the date each link was added and how many times each link has been clicked. The main page (`index.php`) features a form to shorten a URL, a warning message if a link cannot be shortened (and an alert with the short URL if a link has been successfully shortened), and a display of the five most recent and the five most clicked links. There is also a built in directory of short links (`directory.php`) to track every link in the database. Also included is a `.htaccess` file that directs `http://example.com/redirect.php?code=xxxxx` to `http://example.com/xxxxx`.
+This simple PHP-based URL shortner records the date/time a short link is created and how many times that short link has been clicked. The main page (`index.php`) features a form to shorten a URL, a warning message if a link cannot be shortened (and an alert if a link has been successfully shortened), a display of the five most recent short links, and a display of the five most clicked links. There is also a public links directory (`directory.php`) to track every URL in the database. Also included is a `.htaccess` file that directs `http://example.com/redirect.php?code=xxxxx` to `http://example.com/xxxxx`.
 
 * [View Demo](https://seb646.com/surl/)
 
