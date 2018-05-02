@@ -5,7 +5,7 @@
 require_once 'assets/classes/Shortener.php';
 
 // Import MySQL dataabse onnection information
-require_once 'assets/database.php';
+require_once 'assets/db_connect.php';
 
 if(isset($_GET['code'])){
 	$s = new Shortener;

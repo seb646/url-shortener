@@ -2,7 +2,7 @@
 /** url-shortener project by GitHub user @seb646. Source: https://github.com/seb646/url-shortener. */
 
 // Import MySQL connection information
-require_once 'assets/database.php';
+require_once 'assets/db_connect.php';
 
 // Query the latest five entries 
 $recent = db_connect()->query("SELECT * FROM links ORDER BY created DESC");

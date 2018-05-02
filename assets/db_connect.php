@@ -7,7 +7,7 @@ function db_connect() {
     // If there is no connection to the MySQL database, establish one
     if(!isset($connection)) {
         // Import MySQL database connection information
-        $config = parse_ini_file('config.ini.php'); 
+        $config = parse_ini_file('db_config.ini.php'); 
 
         // Connect to MySQL database 
         $connection = mysqli_connect($config['host'], $config['username'], $config['password'], $config['dbname']);

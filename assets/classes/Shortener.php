@@ -7,7 +7,7 @@ class Shortener{
 
 	public function __construct(){
 		// Import MySQL dataabse onnection information
-		$this->db_config = parse_ini_file($_SERVER['DOCUMENT_ROOT'].'/assets/config.ini.php');
+		$this->db_config = parse_ini_file($_SERVER['DOCUMENT_ROOT'].'/assets/db_config.ini.php');
 
 		// Connect to MySQL Database
 		$this->db = new mysqli($this->db_config['host'], $this->db_config['username'], $this->db_config['password'], $this->db_config['dbname']);
