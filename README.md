@@ -9,7 +9,7 @@ This simple PHP-based service converts URLs into short links on a custom top-lev
 This service must be uploaded to your domain's root directory. Your server must also allow `.htaccess` file overrides. 
 
 ### Database Setup
-Create a database named `surl` and import the `surl.sql` file. 
+Create a database named `surl` and import the `database.sql` file. 
 
 ### Database Configuration
 Open the `assets/config.ini.php` file and replace `YOUR_USERNAME` (line 7) and `YOUR_PASSWORD` (line 8) with your MySQL username and password.
