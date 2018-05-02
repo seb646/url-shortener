@@ -18,4 +18,4 @@ if(isset($_POST['url'])){
 	}
 }
 
-header('Location: /surl/index.php');
+header('Location: ../index.php');
