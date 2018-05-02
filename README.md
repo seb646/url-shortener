@@ -11,7 +11,7 @@ This service must be uploaded to your domain's root directory. Your server must 
 ### Database Setup
 Create a database named `surl` and import the `surl.sql` file. 
 
-### Dataabse Condifuration 
+### Database Configuration
 Open the `assets/config.ini.php` file and replace `YOUR_USERNAME` (line 7) and `YOUR_PASSWORD` (line 8) with your MySQL username and password.
 
 ## Credits
