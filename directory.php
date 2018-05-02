@@ -1,11 +1,11 @@
 <?php 
 /** url-shortener project by GitHub user @seb646. Source: https://github.com/seb646/url-shortener. */
 
-// Connect to MySQL Database 
-$mysqli  = mysqli_connect("localhost", "USERNAME", "PASSWORD", "surl");
+// Import MySQL connection information
+require_once 'assets/database.php';
 
 // Query the latest five entries 
-$newest = $mysqli->query("SELECT * FROM links ORDER BY created DESC");
+$recent = db_connect()->query("SELECT * FROM links ORDER BY created DESC");
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,9 +33,9 @@ $newest = $mysqli->query("SELECT * FROM links ORDER BY created DESC");
 				<tbody>
 					<?php 
 						// Display latest five dataabse entries
-						while ($entries = mysqli_fetch_assoc($newest)) {
+						while ($entries = mysqli_fetch_assoc($recent)) {
 							echo "<tr>";
-							echo '<td><a href="//'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.$entries['code'].'<a></td>';
+							echo '<td><a href="//'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'<a></td>';
 			     			echo '<td>'.$entries['url']."</td>";
 			     			echo "<td>".$entries['created']." EST</td>";
 			     			echo "<td>".$entries['clicks']."</td>";

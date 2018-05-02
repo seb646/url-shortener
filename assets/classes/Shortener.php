@@ -3,10 +3,14 @@
 
 class Shortener{
 	protected $db;
+	public $db_config;
 
 	public function __construct(){
+		// Import MySQL dataabse onnection information
+		$this->db_config = parse_ini_file($_SERVER['DOCUMENT_ROOT'].'/assets/config.ini.php');
+
 		// Connect to MySQL Database
-		$this->db = new mysqli('localhost', 'USERNAME', 'PASSWORD', 'surl');
+		$this->db = new mysqli($this->db_config['host'], $this->db_config['username'], $this->db_config['password'], $this->db_config['dbname']);
 	}
 
 	protected function generateCode($num){

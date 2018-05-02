@@ -1,19 +1,18 @@
 <?php 
 /** url-shortener project by GitHub user @seb646. Source: https://github.com/seb646/url-shortener. */
-
+	
 // Start a session 
 session_start();
 
-// Connect to MySQL Database 
-$mysqli  = mysqli_connect("localhost", "USERNAME", "PASSWORD", "surl");
+// Import MySQL connection information
+require_once 'assets/database.php';
 
 // Query the latest five entries 
-$newest = $mysqli->query("SELECT * FROM links ORDER BY created DESC LIMIT 5");
+$recent = db_connect()->query("SELECT * FROM links ORDER BY created DESC LIMIT 5");
 
 // Query the latest five entries 
-$used = $mysqli->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
+$used = db_connect()->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -48,7 +47,7 @@ $used = $mysqli->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 				</div>
 			</div><br>
 
-			<div class="row">
+  			<div class="row">
   				<div class="col">
   					<a class="btn btn-success btn-block p-3" role="button" href="directory.php">Links Directory</a>
 		  		</div>
@@ -71,9 +70,9 @@ $used = $mysqli->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 						<tbody>
 							<?php 
 								// Display latest five dataabse entries
-								while ($entries = mysqli_fetch_assoc($newest)) {
+								while ($entries = mysqli_fetch_assoc($recent)) {
 									echo "<tr>";
-									echo '<td><a href="//'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.$entries['code'].'<a></td>';
+									echo '<td><a href="//'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'<a></td>';
 					     			echo '<td>'.$entries['url']."</td>";
 					     			echo "<td>".$entries['created']." EST</td>";
 					     			echo "</tr>";
@@ -101,7 +100,7 @@ $used = $mysqli->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 								while ($entries = mysqli_fetch_assoc($used)) {
 									echo "<tr>";
 					     			echo '<td>'.$entries['clicks']."</td>";
-					     			echo '<td><a href="//'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.$entries['code'].'<a></td>';
+					     			echo '<td><a href="//'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'<a></td>';
 					     			echo '<td>'.$entries['url']."</td>";
 					     			echo "</tr>";
 								}
@@ -109,13 +108,8 @@ $used = $mysqli->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 						</tbody>
 					</table>
 				</div>
-			</div>
-
-			<br><br>
-
+			</div><br><br>
 		</div>
 	</body>
-
 	<?php $mysqli->close();?>
-
 </html>
