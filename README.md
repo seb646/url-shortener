@@ -1,7 +1,5 @@
 # url-shortener
-This simple PHP-based service converts URLs into short links on a custom top-level domain. After each URL shortening, this service records the client's IP address and the date/time. This service also tracks the number of uses for each short link. 
-
-The main page (`index.php`) features a form for a user to shorten a URL, a warning message if the service fails to shorten a URL (and an alert if the service successfully shortens a URL), a display of the five most recent short links, and a display of the five most-clicked short links. There is also a public short links directory (`directory.php`) to track every short link in the database. Also included is a `.htaccess` file that directs `http://YOUR.TLD/redirect.php?code=xxxxx` to `http://YOUR.TLD/xxxxx`.
+This simple PHP-based service converts URLs into "short links" on a custom top-level domain (`http://YOUR.TLD/xxxxx`). If the service can create a database entry for a URL, an alert will output the URL's custom short link. Alternatively, if the service cannot shorten a user's URL, an alert will output an error message. Upon the creation of a short link, the service records the client's IP address and the date/time. The service also records the number of clicks each short link has. 
 
 * [View Demo](https://seb646.com/surl/)
 
