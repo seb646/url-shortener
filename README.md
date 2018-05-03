@@ -8,7 +8,7 @@ This simple PHP-based service converts URLs into "short links" on a custom top-l
 This service must be in a domain's root directory, and the web server must allow `.htaccess` file overrides. 
 
 ### Create the database
-Create a database named `surl` and import the `database.sql` file. 
+Create a MySQL database named `surl` and import the `database.sql` file. 
 
 ### Connect to the database
 Open the `assets/config.ini.php` file and replace `YOUR_USERNAME` (line 7) and `YOUR_PASSWORD` (line 8) with your MySQL username and password.
