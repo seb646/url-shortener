@@ -6,8 +6,8 @@ This simple PHP-based service converts URLs into "short links" on a custom top-l
 
 ## Getting Started
 
-### File Uploading
-This service will not function unless uploaded to a domain's root directory. The server must also allow `.htaccess` file overrides. 
+### Prerequisites
+This service must be in a domain's root directory. The web server must allow `.htaccess` file overrides. 
 
 ### Create a Database
 Create a database named `surl` and import the `database.sql` file. 
