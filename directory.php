@@ -27,6 +27,7 @@ $recent = db_connect()->query("SELECT * FROM links ORDER BY created DESC");
 				      <th scope="col">Short Link</th>
 				      <th scope="col">Destination</th>
 				      <th scope="col">Date Added</th>
+				      <th scope="col">User IP</th>
 				      <th scope="col">Clicks</th>
 				    </tr>
 			    </thead>
@@ -38,6 +39,7 @@ $recent = db_connect()->query("SELECT * FROM links ORDER BY created DESC");
 							echo '<td><a href="//'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'<a></td>';
 			     			echo '<td>'.$entries['url']."</td>";
 			     			echo "<td>".$entries['created']." EST</td>";
+			     			echo "<td>".$entries['user_ip']."</td>";
 			     			echo "<td>".$entries['clicks']."</td>";
 			     			echo "</tr>";
 						}
