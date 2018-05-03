@@ -1,5 +1,7 @@
 # url-shortener
-This simple PHP-based service converts URLs into short links on a custom top-level domain. The service can record the date/time a short link was created and how many times that link was clicked. The main page (`index.php`) features a form for a user to shorten a URL, a warning message if a URL cannot be shortened (and an alert if a URL has been successfully shortened), a display of the five most recent short links, and a display of the five most clicked short links. There is also a public short links directory (`directory.php`) to track every short link in the database. Also included is a `.htaccess` file that directs `http://YOUR.TLD/redirect.php?code=xxxxx` to `http://YOUR.TLD/xxxxx`.
+This simple PHP-based service converts URLs into short links on a custom top-level domain. After each URL shortening, this service records the client's IP address and the date/time. This service also tracks the number of uses for each short link. 
+
+The main page (`index.php`) features a form for a user to shorten a URL, a warning message if the service fails to shorten a URL (and an alert if the service successfully shortens a URL), a display of the five most recent short links, and a display of the five most-clicked short links. There is also a public short links directory (`directory.php`) to track every short link in the database. Also included is a `.htaccess` file that directs `http://YOUR.TLD/redirect.php?code=xxxxx` to `http://YOUR.TLD/xxxxx`.
 
 * [View Demo](https://seb646.com/surl/)
 
@@ -7,9 +9,9 @@ This simple PHP-based service converts URLs into short links on a custom top-lev
 ## Getting Started
 
 ### File Uploading
-This service must be uploaded to your domain's root directory. Your server must also allow `.htaccess` file overrides. 
+This service will not function unless uploaded to a domain's root directory. The server must also allow `.htaccess` file overrides. 
 
-### Create a Databbase
+### Create a Database
 Create a database named `surl` and import the `database.sql` file. 
 
 ### Database Connection
