@@ -37,8 +37,11 @@ class Shortener{
 			    $url = substr($url, 0, -1);
 			}
 
-			// Insert the URL (without unique code)
-			$this->db->query("INSERT INTO links (url, created) VALUES ('{$url}', NOW())");
+			// Grab the user's IP addreess
+			$user_ip = $_SERVER[REMOTE_ADDR];
+
+			// Insert the URL, date added, and user IP address
+			$this->db->query("INSERT INTO links (url, created, user_ip) VALUES ('{$url}', NOW(), '{$user_ip}')");
 
 			// Generate unique code based on item id
 			$code = $this->generateCode($this->db->insert_id);

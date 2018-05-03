@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 30, 2018 at 09:12 PM
+-- Generation Time: May 02, 2018 at 10:42 PM
 -- Server version: 10.1.23-MariaDB-9+deb9u1
 -- PHP Version: 7.0.27-0+deb9u1
 
@@ -31,6 +31,7 @@ CREATE TABLE `links` (
   `url` varchar(255) NOT NULL,
   `code` varchar(12) NOT NULL,
   `created` datetime NOT NULL,
+  `user_ip` text NOT NULL,
   `clicks` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -60,7 +61,7 @@ ALTER TABLE `links`
 -- AUTO_INCREMENT for table `links`
 --
 ALTER TABLE `links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12000002;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12800002;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
