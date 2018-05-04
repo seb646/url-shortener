@@ -1,5 +1,5 @@
 # url-shortener
-This simple PHP-based service converts URLs into "short links" on a custom top-level domain. If the service can create a database entry for a URL, an alert will output the URL's custom short link to the user. Alternatively, if the service cannot shorten a user's URL, an alert will output an error message. Upon the creation of a short link, the service records the client's IP address and the date/time. The service also records the number of clicks each short link has. 
+This simple PHP-based service converts URLs into short, redirected links on a custom top-level domain. It features an in-page alert system to notify the user upon a successful (or unsuccessful) URL shortening. The service also records the IP address of every user who successfully submits a short link, along with the short link's exact time of creation and how many clicks it has received.
 
 * [View Demo](https://seb646.com/surl/)
 
