@@ -11,7 +11,7 @@ require_once 'assets/db_connect.php';
 $recent = db_connect()->query("SELECT * FROM links ORDER BY created DESC LIMIT 5");
 
 // Query the latest five entries 
-$used = db_connect()->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
+$clicked = db_connect()->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,7 +69,7 @@ $used = db_connect()->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 					    </thead>
 						<tbody>
 							<?php 
-								// Display latest five dataabse entries
+								// Display latest five database entries
 								while ($entries = mysqli_fetch_assoc($recent)) {
 									echo "<tr>";
 									echo '<td><a href="//'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'<a></td>';
@@ -96,8 +96,8 @@ $used = db_connect()->query("SELECT * FROM links ORDER BY clicks DESC LIMIT 5");
 					    </thead>
 						<tbody>
 							<?php 
-								// Display latest five dataabse entries
-								while ($entries = mysqli_fetch_assoc($used)) {
+								// Display top five most clicked database entries
+								while ($entries = mysqli_fetch_assoc($clicked)) {
 									echo "<tr>";
 					     			echo '<td>'.$entries['clicks']."</td>";
 					     			echo '<td><a href="//'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'" target="_blank">'.$_SERVER['HTTP_HOST'].'/'.$entries['code'].'<a></td>';
