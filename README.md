@@ -5,7 +5,7 @@ This simple PHP-based service converts URLs into short, redirected links on a cu
 
 
 ## Getting Started
-This service must be in a domain's root directory, and the web server must allow `.htaccess` file overrides. 
+This service must be in your domain's root directory, and your web server must allow `.htaccess` file overrides. 
 
 ### Create the database
 Create a MySQL database named `surl` and import the `database.sql` file. 
