@@ -1,5 +1,5 @@
 # url-shortener 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg "MIT License")](https://github.com/seb646/url-shortener/blob/master/LICENSE.md) [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen.svg "MIT License")](http://surl.seb646.com/index.php)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg "MIT License")](https://github.com/seb646/url-shortener/blob/master/LICENSE.md) [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen.svg "Live Demo")](http://surl.seb646.com/index.php) 
 
 This simple PHP-based service converts URLs into short, redirected links on a custom top-level domain. It features an in-page alert system to notify the user upon a successful (or unsuccessful) URL shortening. The service also records the IP address of every user who successfully submits a short link, along with the short link's exact time of creation and how many clicks it has received.
 
